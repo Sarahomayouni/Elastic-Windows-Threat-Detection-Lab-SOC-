@@ -135,6 +135,9 @@ The dashboard is designed to identify suspicious execution behavior, persistence
 ## Custom Detection Rules
 
 The project includes multiple custom detection rules written using KQL and EQL.
+Rules Overview:
+
+![Rules-Overview](Screenshots/Rules-Overview.png)
 
 ### Detection Categories
 
@@ -181,7 +184,11 @@ Each detection rule is assigned:
 	- Low
 - Risk Score
 	Numeric risk-based prioritization score between 0 to 100.
-	
+A custom rule example:
+Rules Overview:
+
+![Rule-Example](Screenshots/Rule-Example.png)
+
 ### Detection Engineering Focus
 
 This project emphasizes behavioral threat detection rather than static IOC-based detection.
