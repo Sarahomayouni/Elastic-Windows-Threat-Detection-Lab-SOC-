@@ -69,17 +69,17 @@ Due to limited internet connectivity during deployment, Docker images were downl
 
 - Kibana Container
 
-docker run -d \
---name kibana_8 \
---network Elastic \
--p 5601:5601 \
--e ELASTICSEARCH_HOSTS='["https://IP_ADDRESS:9200"]' \
--e ELASTICSEARCH_SSL_VERIFICATIONMODE=none \
--e ELASTICSEARCH_SERVICEACCOUNTTOKEN="YOUR_TOKEN" \
--e XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY="YOUR_KEY" \
--e XPACK_SECURITY_ENCRYPTIONKEY="YOUR_KEY" \
--e XPACK_REPORTING_ENCRYPTIONKEY="YOUR_KEY" \
-kibana:8.13.0
+	docker run -d \
+	--name kibana_8 \
+	--network Elastic \
+	-p 5601:5601 \
+	-e ELASTICSEARCH_HOSTS='["https://IP_ADDRESS:9200"]' \
+	-e ELASTICSEARCH_SSL_VERIFICATIONMODE=none \
+	-e ELASTICSEARCH_SERVICEACCOUNTTOKEN="YOUR_TOKEN" \
+	-e XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY="YOUR_KEY" \
+	-e XPACK_SECURITY_ENCRYPTIONKEY="YOUR_KEY" \
+	-e XPACK_REPORTING_ENCRYPTIONKEY="YOUR_KEY" \
+	kibana:8.13.0
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
