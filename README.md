@@ -137,7 +137,7 @@ The dashboard is designed to identify suspicious execution behavior, persistence
 The project includes multiple custom detection rules written using KQL and EQL.
 Rules Overview:
 
-![Rule-Overview](Screenshots/Rule-Overview.png)
+![Custom-Rules-Overview.png](Screenshots/Custom-Rules-Overview.png.png)
 
 ### Detection Categories
 
