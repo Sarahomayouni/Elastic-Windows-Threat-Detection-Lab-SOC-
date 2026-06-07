@@ -138,7 +138,7 @@ The project includes multiple custom detection rules written using KQL and EQL.
 
 Rules Overview:
 
-![Custom-Rules-Overview.png](Screenshots/Custom-Rules-Overview.png.png)
+![Custom-Rules-Overview](Screenshots/Custom-Rules-Overview.png)
 
 ### Detection Categories
 
