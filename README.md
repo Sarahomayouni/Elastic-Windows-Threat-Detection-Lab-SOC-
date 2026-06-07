@@ -135,6 +135,7 @@ The dashboard is designed to identify suspicious execution behavior, persistence
 ## Custom Detection Rules
 
 The project includes multiple custom detection rules written using KQL and EQL.
+
 Rules Overview:
 
 ![Custom-Rules-Overview.png](Screenshots/Custom-Rules-Overview.png.png)
@@ -184,8 +185,9 @@ Each detection rule is assigned:
 	- Low
 - Risk Score
 	Numeric risk-based prioritization score between 0 to 100.
+
+
 A custom rule example:
-Rules Overview:
 
 ![Rule-Example](Screenshots/Rule-Example.png)
 
