@@ -142,11 +142,11 @@ Connectivity was validated using powershell commands:
 .\filebeat.exe test output
 ```
 
--Verification
-
+- Verification
+  
 Successful ingestion was verified through:
-  - Elasticsearch indices
-  - Kibana Discover
+	* Elasticsearch indices
+	* Kibana Discover
 
 
 - Data Flow
@@ -164,7 +164,7 @@ Elasticsearch
       |
       v
 Kibana Dashboards
-```bash
+```
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 # Winlogbeat
