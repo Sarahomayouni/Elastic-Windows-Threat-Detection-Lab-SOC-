@@ -127,10 +127,9 @@ The configuration file is available in: Beats/Filebeat/filebeat.yml
 - Data Collection
 
 The following Windows Event Logs were collected:
-
-  - Security
-  - System
-  - Application
+	 Security
+	 System
+	 Application
 
 - Elasticsearch Connectivity
 
