@@ -128,9 +128,9 @@ The configuration file is available in: Beats/Filebeat/filebeat.yml
 
 The following Windows Event Logs were collected:
 
-	- Security
-	- System
-	- Application
+  - Security
+  - System
+  - Application
 
 - Elasticsearch Connectivity
 
@@ -147,12 +147,12 @@ Connectivity was validated using powershell commands:
 
 Successful ingestion was verified through:
 
-	- Elasticsearch indices
-	- Kibana Discover
+  - Elasticsearch indices
+  - Kibana Discover
 
 
 - Data Flow
-
+```bash
 Windows Endpoints
       |
       |
@@ -166,7 +166,7 @@ Elasticsearch
       |
       v
 Kibana Dashboards
-
+```bash
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 # Winlogbeat
@@ -188,17 +188,17 @@ The configuration file is available in: Beats/Winlogbeat/winlogbeat.yml
 in the second Phase of Project, Winlogbeat was configured to collect events from the following Windows Event Log channels:
 
 
-	- Microsoft-Windows-Sysmon/Operational
-	- Microsoft-Windows-PowerShell/Operational
-	- Security
-	- System
-	- Application
+  - Microsoft-Windows-Sysmon/Operational
+  - Microsoft-Windows-PowerShell/Operational
+  - Security
+  - System
+  - Application
 
 Sysmon was deployed on Windows endpoints to provide enhanced telemetry, including:
 
-	- Process Creation Events
-	- Network Connection Events
-	- File Creation Events
+  - Process Creation Events
+  - Network Connection Events
+  - File Creation Events
 
 Winlogbeat collected Sysmon-generated events directly from the Microsoft-Windows-Sysmon/Operational channel and forwarded them to Elasticsearch.
 
@@ -207,6 +207,7 @@ Winlogbeat collected Sysmon-generated events directly from the Microsoft-Windows
 Winlogbeat was configured to send events directly to Elasticsearch running in the lab environment.
 
 Connectivity was validated using the following commands:
+
 ```bash
 .\winlogbeat.exe test config
 .\winlogbeat.exe test output
@@ -216,8 +217,8 @@ Connectivity was validated using the following commands:
 
 Successful log ingestion was verified through:
 
-	- Elasticsearch indices
-	- Kibana Discover
+  - Elasticsearch indices
+  - Kibana Discover
 
 
 	Windows Endpoints
