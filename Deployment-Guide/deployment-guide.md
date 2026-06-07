@@ -50,13 +50,13 @@ The lab environment was deployed using Docker containers on an Ubuntu virtual ma
 Due to limited internet connectivity during deployment, Docker images were downloaded manually and containers were configured and started using Docker CLI commands.
 
 - Pull Images
-
+```bash
 	docker pull elasticsearch:8.13.0
 	docker pull kibana:8.13.0
-
+```
 - Elasticsearch Container
 
-
+```bash
 	docker run -d \
 	--name elasticsearch_8 \
 	--network Elastic \
@@ -65,10 +65,10 @@ Due to limited internet connectivity during deployment, Docker images were downl
 	-e discovery.type=single-node \
 	-e xpack.security.enabled=true \
 	elasticsearch:8.13.0
-
+```
 
 - Kibana Container
-
+```bash
 	docker run -d \
 	--name kibana_8 \
 	--network Elastic \
@@ -80,7 +80,7 @@ Due to limited internet connectivity during deployment, Docker images were downl
 	-e XPACK_SECURITY_ENCRYPTIONKEY="YOUR_KEY" \
 	-e XPACK_REPORTING_ENCRYPTIONKEY="YOUR_KEY" \
 	kibana:8.13.0
-
+```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Sysmon Installation & Configuration
@@ -97,17 +97,17 @@ Sysmon (System Monitor) is used to collect detailed endpoint telemetry beyond st
 
 
 	Run the following command as Administrator:
-
+```bash
 	Sysmon64.exe -accepteula -i sysmonconfig.xml
-
+```
 This command Installs Sysmon as a Windows service, loads the configuration file and Starts event logging.
 
 sysmonconfig.xml is available in : Sysmon/sysmonconfig.xml
 
 To verify Sysmon is installed correctly:
-
+```bash
 	Sysmon64.exe -c
-
+```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Filebeat 
@@ -137,9 +137,11 @@ The following Windows Event Logs were collected:
 Filebeat was configured to send events directly to Elasticsearch running in the lab environment.
 
 Connectivity was validated using powershell commands: 
-	-  .\filebeat.exe test config
-	-  .\filebeat.exe test output
 
+```bash
+.\filebeat.exe test config
+.\filebeat.exe test output
+```
 
 -Verification
 
@@ -205,9 +207,10 @@ Winlogbeat collected Sysmon-generated events directly from the Microsoft-Windows
 Winlogbeat was configured to send events directly to Elasticsearch running in the lab environment.
 
 Connectivity was validated using the following commands:
-
-	- .\winlogbeat.exe test config
-	- .\winlogbeat.exe test output
+```bash
+.\winlogbeat.exe test config
+.\winlogbeat.exe test output
+```
 
 - Verification
 
