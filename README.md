@@ -16,22 +16,8 @@ The lab simulates a lightweight SOC detection environment capable of identifying
 
 ## Lab Architecture
 
-Windows Hosts
-      |
-      v
-   Sysmon
-      |
-      v
-Windows Event Logs
-      |
-      v
-Filebeat/Winlogbeat
-      |
-      v
-Elasticsearch
-      |
-      v
-   Kibana
+Windows Hosts -->  Sysmon   -->  Windows Event Logs    -->  Filebeat/Winlogbeat  --> Elasticsearch   --> Kibana
+
 
 ![Architecture](Architecture/Architecture.png)
 
@@ -153,23 +139,23 @@ The project includes multiple custom detection rules written using KQL and EQL.
 ### Detection Categories
 
 #### Execution Detection
-	- Suspicious PowerShell execution
-	- Obfuscated command-line activity
-	- Office spawning PowerShell
+- Suspicious PowerShell execution
+- Obfuscated command-line activity
+- Office spawning PowerShell
 
 #### Defense Evasion Detection
-	- Execution from Temp/AppData directories
-	- Suspicious archive and script drops
-	- LOLBins activity
+- Execution from Temp/AppData directories
+- Suspicious archive and script drops
+- LOLBins activity
 
 #### Persistence Detection
-	- Startup folder persistence monitoring
+- Startup folder persistence monitoring
 
 #### Command and Control Detection
-	- Certutil ingress tool transfer
-	- Outbound shell connections
-	- Non-browser HTTP/HTTPS traffic
-	- LOLBins network communication
+- Certutil ingress tool transfer
+- Outbound shell connections
+- Non-browser HTTP/HTTPS traffic
+- LOLBins network communication
 
 #### MITRE ATT&CK Coverage
 
@@ -177,10 +163,10 @@ The detection rules are mapped to MITRE ATT&CK techniques and tactics.
 
 Covered tactics include:
 
-	- TA0002 — Execution
-	- TA0003 — Persistence
-	- TA0005 — Defense Evasion
-	- TA0011 — Command and Control
+- TA0002 — Execution
+- TA0003 — Persistence
+- TA0005 — Defense Evasion
+- TA0011 — Command and Control
 	
 ### Risk Scoring Model
 
@@ -202,25 +188,24 @@ This project emphasizes behavioral threat detection rather than static IOC-based
 
 Key focus areas include:
 
-	- PowerShell abuse
-	- LOLBins detection
-	- Suspicious process execution
-	- Multi-stage attack chains
-	- Persistence monitoring
-	- External network communication
-	- Behavioral analytics
+- PowerShell abuse
+- LOLBins detection
+- Suspicious process execution
+- Multi-stage attack chains
+- Persistence monitoring
+- External network communication
+- Behavioral analytics
 	
 ## Future Improvements
 
-	- Threat intelligence enrichment
-	- Elastic Agent integration for centralized telemetry collection
-	- Firewall and IDS/IPS telemetry integration
-	- Additional Sysmon event coverage
-	- Linux telemetry integration
-	- Leveraging Pre-built Rules 
-	- Advanced event correlation and attack chain analysis
-	- More Advanced and Practical Detection Dashboards
-	- SOAR and incident response workflow integration
-	- Automated incident enrichment
-	- Detection tuning and false positive reduction
-	- Advanced attack simulation scenarios
+- Threat intelligence enrichment- Elastic Agent integration for centralized telemetry collection
+- Firewall and IDS/IPS telemetry integration
+- Additional Sysmon event coverage
+- Linux telemetry integration
+- Leveraging Pre-built Rules 
+- Advanced event correlation and attack chain analysis
+- More Advanced and Practical Detection Dashboards
+- SOAR and incident response workflow integration
+- Automated incident enrichment
+- Detection tuning and false positive reduction
+- Advanced attack simulation scenarios
