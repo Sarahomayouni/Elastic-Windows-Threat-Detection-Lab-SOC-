@@ -100,11 +100,11 @@ Sysmon (System Monitor) is used to collect detailed endpoint telemetry beyond st
 ```bash
 	Sysmon64.exe -accepteula -i sysmonconfig.xml
 ```
-This command Installs Sysmon as a Windows service, loads the configuration file and Starts event logging.
+	This command Installs Sysmon as a Windows service, loads the configuration file and Starts event logging.
 
-sysmonconfig.xml is available in : Sysmon/sysmonconfig.xml
+	sysmonconfig.xml is available in : Sysmon/sysmonconfig.xml
 
-To verify Sysmon is installed correctly:
+	To verify Sysmon is installed correctly:
 ```bash
 	Sysmon64.exe -c
 ```
@@ -122,7 +122,7 @@ Filebeat was deployed on Windows endpoints to collect and forward Windows Event 
 
 	A custom `filebeat.yml` configuration file was used to enable Windows Event Log collection and establish a secure connection with Elasticsearch.
 
-The configuration file is available in: Beats/Filebeat/filebeat.yml
+	The configuration file is available in: Beats/Filebeat/filebeat.yml
 
 - **Data Collection**
 
@@ -133,9 +133,9 @@ The configuration file is available in: Beats/Filebeat/filebeat.yml
 
 - **Elasticsearch Connectivity**
 
-Filebeat was configured to send events directly to Elasticsearch running in the lab environment.
+	Filebeat was configured to send events directly to Elasticsearch running in the lab environment.
 
-Connectivity was validated using powershell commands: 
+	Connectivity was validated using powershell commands: 
 
 ```bash
 .\filebeat.exe test config
@@ -197,7 +197,7 @@ Winlogbeat was deployed on Windows endpoints to collect and forward Sysmon-gener
 	- Network Connection Events
 	- File Creation Events
 
-Winlogbeat collected Sysmon-generated events directly from the Microsoft-Windows-Sysmon/Operational channel and forwarded them to Elasticsearch.
+	Winlogbeat collected Sysmon-generated events directly from the Microsoft-Windows-Sysmon/Operational channel and forwarded them to Elasticsearch.
 
 - **Elasticsearch Connectivity**
 
