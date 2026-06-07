@@ -146,7 +146,6 @@ Connectivity was validated using powershell commands:
 -Verification
 
 Successful ingestion was verified through:
-
   - Elasticsearch indices
   - Kibana Discover
 
