@@ -207,7 +207,8 @@ Key focus areas include:
 	
 ## Future Improvements
 
-- Threat intelligence enrichment- Elastic Agent integration for centralized telemetry collection
+- Threat intelligence enrichment
+- Elastic Agent integration for centralized telemetry collection
 - Firewall and IDS/IPS telemetry integration
 - Additional Sysmon event coverage
 - Linux telemetry integration
