@@ -1,4 +1,4 @@
-# Elastic Windows hreat Detection Lab (SOC)
+# Elastic Windows Threat Detection Lab (SOC)
 
 A hands-on Windows threat detection and security monitoring laboratory built using the Elastic Stack, Sysmon telemetry, and custom SIEM detection rules.
 This project focuses on behavioral threat detection, Windows endpoint monitoring, authentication visibility, and SOC-oriented security analytics using Elasticsearch and Kibana.
